@@ -287,9 +287,9 @@ defaults:
     values:
       layout: default #single
       author_profile: true
-      read_time: false
+      read_time: #false
       comments: # true
       share: true
       related: true
       date: true
-      date_format: "%Y-%m-%d"
+      #date_format: "%Y-%m-%d"
