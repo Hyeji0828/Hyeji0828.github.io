@@ -4,6 +4,20 @@ layout: archive
 
 {{ content }}
 
+<ul class="posts">
+  {% assign categories = page.categories | join: "-" %}
+  {% for post in site.posts %}
+    {% assign postCategories = post.categories | join: "-" %}
+    {% if categories == postCategories %}
+      <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endif %}
+    
+  {% endfor %}
+
+</ul>
+
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
   {% include posts-category.html taxonomy=page.taxonomy type=entries_layout %}
