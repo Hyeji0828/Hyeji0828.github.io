@@ -1,5 +1,8 @@
 <meta charset="utf-8">
 
+{% capture mytitle%}{{page.title}}{%endcapture%}
+<title>{% if mytitle %}{{ mytitle | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
 {% include seo.html %}
 
 {% unless site.atom_feed.hide %}
