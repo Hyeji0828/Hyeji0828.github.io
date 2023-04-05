@@ -12,3 +12,5 @@ main:
   #   url: /sitemap/
     - title: "Category"
       url: /categories/
+    - title: "부스트캠프AITech5기"
+      url: /categories/AITech5/
