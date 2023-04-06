@@ -4,6 +4,10 @@ layout: archive
 
 {{ content }}
 
+<div id="main" role="main">
+  {% include sidebar.html %}
+</div>
+
 <ul class="posts">
   {% assign categories = page.categories | join: "-" %}
   {% for post in site.posts %}
