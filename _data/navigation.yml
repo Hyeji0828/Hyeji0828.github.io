@@ -14,3 +14,5 @@ main:
       url: /categories/
     - title: "부스트캠프 AI Tech 5기"
       url: /categories/AITech5/
+    - title: "논문 리뷰"
+      url: /categories/PaperReview/
