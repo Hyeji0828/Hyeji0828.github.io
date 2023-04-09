@@ -38,7 +38,7 @@ category: PaperReview
 
 ### 3.1 ReLU Nonlinearity
 
-기존의 Tanh, Sigmoid 함수 대신  ReLU 함수를 사용했다. 잘 작동되는 |tanh(x)|는 과적합 방지를 주요 목적으로 했기 때문에 큰 모델과 큰 데이터셋에는 더 빠르게 적합할 수 있는 ReLU가 더 적당하다고 보았다. 
+기존의 Tanh, Sigmoid 함수 대신  ReLU 함수를 사용했다. 잘 작동되는 tanh(x)는 과적합 방지를 주요 목적으로 했기 때문에 큰 모델과 큰 데이터셋에는 더 빠르게 적합할 수 있는 ReLU가 더 적당하다고 보았다. 
 
 **→ ReLU가 기존에 비해 어떤 식으로 포화를 방지할까? sigmoid, tanh와 비교해서 뭐가 좋은걸까?**
 
@@ -46,7 +46,7 @@ category: PaperReview
 - tanh : sigmoid의 문제를 일부 해결한다. -1과 1사이 값을 가지지만 여전히 값이 커지면 (뉴런 포화) 기울기 소실문제가 발생한다.
 - ReLU : 양수일 때 기울기 소실문제가 발생하지 않고 계산도 빠르다. AlexNet 처음 사용
 
-[참고](https://velog.io/@guide333/풀잎스쿨-CS231n-6강-Training-Neural-Networks-Part-1#sigmoid-함수)
+[자세한 설명](https://velog.io/@guide333/풀잎스쿨-CS231n-6강-Training-Neural-Networks-Part-1#sigmoid-함수)
 
 ### 3.2 멀티 GPU 학습
 
@@ -58,7 +58,7 @@ category: PaperReview
 
 **→ 다른 GPU에서 받은 결과랑 내가 연산한 결과 2개는 다음 레이어에 넘어갈 때 어떻게 적용될까?**
 
-- 보통은 sum하거나 concat한다. AlexNet에서는 sum을 한 것으로 보인다.
+보통은 sum하거나 concat한다. AlexNet에서는 sum을 한 것으로 보인다.
 
 ### 3.3 Local Response Normalization
 
@@ -111,7 +111,7 @@ s < z : overlapping pooling (중첩 풀링).
     
     픽셀이 약간 이동해도 라벨은 변하지 않는다는 것과 중앙만 아니라 가장자리도 학습하기 위해서이지만 당시 Augmentation의 한계라고도 볼 수 있다.
     
-    [09.01 Understanding of Alexnet](https://wikidocs.net/164787)
+    [참고(09.01 Understanding of Alexnet)](https://wikidocs.net/164787)
     
 2. RGB 채널 강도 변경 : 픽셀 값 집합에서 PCA 수행. 자연 이미지에서 조명의 강도와 색상이 바뀌어도 개체 식별은 변하지 말아야 하는 상황을 구현.
 - 패치 : 이미지나 비디오의 작은 영역. 데이터의 일부분. 전체 데이터의 특징을 파악하고 분석하는데 사용.
@@ -123,7 +123,7 @@ s < z : overlapping pooling (중첩 풀링).
 
 → **Dropout 을 하면 왜 성능이 좋아지는걸까?**
 
-[5 Perspectives to Why Dropout Works So Well](https://towardsdatascience.com/5-perspectives-to-why-dropout-works-so-well-1c10617b8028)
+[Dropout에 대한 아티클(5 Perspectives to Why Dropout Works So Well)](https://towardsdatascience.com/5-perspectives-to-why-dropout-works-so-well-1c10617b8028)
 
 1. 노드를 삭제함으로써 어떤 노드가 중요한지, 그렇지 않은지를 알게된다. 좋은 노드가 삭제되면 비교적 덜 중요한 노드들이 더 좋은 결과를 내기 위해 노력하고, 나쁜 노드가 삭제되면 불필요한 노드를 삭제해 학습을 개선한다.
 2. 앙상블(배깅) 효과. 매번 랜덤하게 노드가 삭제되니 매번 다른 구조를 가진다. → 앙상블과 비슷한 효과
