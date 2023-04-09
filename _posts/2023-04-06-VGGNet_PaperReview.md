@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: "[VGGNet] VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE - SCALE IMAGE RECOGNITION 리뷰"
-date: 2023-04-09
+date: 2023-04-06
 category: PaperReview
 ---
 

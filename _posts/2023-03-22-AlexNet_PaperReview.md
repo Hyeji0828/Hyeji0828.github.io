@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: "[AlexNet] ImageNet Classification with Deep Convolutional Neural Networks 리뷰"
-date: 2023-04-09
+date: 2023-03-22
 category: PaperReview
 ---
 
