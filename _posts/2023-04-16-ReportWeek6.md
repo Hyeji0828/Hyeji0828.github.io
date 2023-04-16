@@ -29,6 +29,7 @@ category: AITech5
     - [x]  Tensorboard 테스트
     - [x]  GoogleNet 테스트
     - [x]  DenseNet 테스트
+- [x]  [CV 기초대회] 8강
 
 | 모델 | Loss | Accuracy | Epochs | FC 코드 |
 | --- | --- | --- | --- | --- |
